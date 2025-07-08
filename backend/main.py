@@ -35,7 +35,7 @@ async def lifespan(app: FastAPI):
     logger.info("Loading sentiment analysis model...")
     sentiment_analyzer = pipeline(
         "sentiment-analysis",
-        model="ProsusAI/finbert",
+        model="mrm8488/distilroberta-finetuned-financial-news-sentiment-analysis",
         return_all_scores=True
     )
     logger.info("Model loaded successfully!")
