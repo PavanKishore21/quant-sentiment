@@ -136,7 +136,7 @@ const MarketSentimentDashboard = () => {
       reconnectTimeoutRef.current = null;
     }
     try {
-      ws.current = new WebSocket('ws://localhost:8000/ws');
+      ws.current = new WebSocket(process.env.REACT_APP_WS_URL);
       ws.current.onopen = () => {
         console.log('WebSocket Connected');
         setConnected(true);
